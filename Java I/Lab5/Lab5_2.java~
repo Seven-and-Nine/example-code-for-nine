@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Lab5_2 {
+    public static void main(String[] args) {
+        Random rnd = new Random();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter how many sides you want:");
+        int dicesides = scan.nextInt();
+        System.out.println("Please enter how many times you wish to roll");
+        int times = scan.nextInt();
+        for(int x = 1; x <= times; x++) {
+          System.out.println(rnd.nextInt(dicesides)+1);
+        }
+    }
+}

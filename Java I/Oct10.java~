@@ -1,0 +1,29 @@
+public class Oct10
+{
+  public static void main(String[] arg)
+  {
+    Die die1;
+    die1 = new Die(3);
+    
+    die1.roll();
+ //    System.out.println("we rolled a "+die1.dieFace);
+    System.out.println("we rolled a "+die1.getDieFace());
+    
+    System.out.println(die1);
+    
+    Die die2 = new Die();
+    
+    int counter = 0;
+    for(int i=0;i<360;i++)
+    {
+      die1.roll();
+      die2.roll();
+      if((die1.getDieFace() == 1) && (die2.getDieFace() == 1))
+      {
+        counter++;
+        System.out.println("Snake eyes!");
+      }
+    }
+    System.out.println(counter);
+  }
+}
