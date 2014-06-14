@@ -1,0 +1,9 @@
+import java.util.Scanner;
+
+public class Lab3_2
+{ 
+  public static void main(String[] arg)
+  {
+    
+  }
+}

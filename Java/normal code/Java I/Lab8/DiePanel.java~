@@ -1,0 +1,52 @@
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Random;
+
+public class ButtonPanel extends JPanel
+{
+  private JButton button;
+  private JLabel rgbLabel;
+  private JLabel clickLabel;
+  private Random rnd;
+  private int clickCounter;
+  
+  public ButtonPanel()
+  {
+    rnd = new Random();
+    clickCounter = 0;
+    button = new JButton("Click Me");
+    ButtonListener listener = new ButtonListener();
+    button.addActionListener(listener);
+    add(button);
+    
+    rgbLabel = new JLabel("blue");
+    
+    
+    clickLabel = new JLabel("count = 0");
+    JPanel subpanel = new JPanel();
+    subpanel.setPreferredSize(new Dimension(300,100));
+    subpanel.setBackground(new Color(190,190,190));
+    subpanel.add(clickLabel);
+    subpanel.add(rgbLabel);
+    add(subpanel);
+    setPreferredSize(new Dimension(600,400));
+    setBackground(Color.BLUE);
+  }
+  
+  private class ButtonListener implements ActionListener
+  {
+    public void actionPerformed(ActionEvent event)
+    {
+      int red = rnd.nextInt(256);
+      int green = rnd.nextInt(256);
+      int blue = rnd.nextInt(256);
+      rgbLabel.setText("red="+red+" green="+green+" blue= "+blue);
+      setBackground(new Color(red,green,blue));
+      clickCounter++;
+      clickLabel.setText("   count = "+clickCounter);
+    }
+  }
+}

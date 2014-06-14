@@ -1,0 +1,43 @@
+import java.util.Random;
+
+public class Die
+{
+  private int final FACENUMBER = 6;
+  private int dieFace;
+  private Random rnd;
+  
+  public Die()
+  {
+    dieFace = FACENUMBER;
+    rnd = new Random();
+  //  System.out.println("inside constructor");
+  }
+  
+  public Die(int initial)
+  {
+    dieFace = initial;
+    rnd new Random();
+  }
+  
+  public int roll()
+  {
+    dieFace = rnd.nextInt(FACENUMBER) + 1;
+    return dieFace;
+  }
+  
+  public void setDieFace(int value)
+  {
+    if ( (1<= value) && (value <= FACENUMBER))
+      dieFace = value;
+  }
+  
+  public int getDieFace()
+  {
+    return dieFace;
+  }
+  
+  public String toString()
+  {
+    return Integer.toString(dieFace);
+  }
+}

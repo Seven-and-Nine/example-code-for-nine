@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Lab6_1
+{
+  public static void main(String[] arg)
+  {
+    Computer rps = new Computer();
+    Scanner scan = new Scanner(System.in);
+    
+    while ()
+  }
+}

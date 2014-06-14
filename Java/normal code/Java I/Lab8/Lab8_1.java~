@@ -1,0 +1,15 @@
+import javax.swing.JFrame;
+
+public class Nov5
+{
+  public static void main(String[] arg)
+  {
+    JFrame frame = new JFrame("Nov 5");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    ButtonPanel panel = new ButtonPanel();
+    
+    frame.getContentPane().add(panel);
+    frame.pack();
+    frame.setVisible(true);
+  }
+}
